@@ -10,7 +10,15 @@ def fact(n):
 	Post: Returns the factorial of 'n'.
 	Throws: ValueError if n < 0
 	"""
-	pass
+	fact=1
+	if type(n)!= int:
+		return(None)
+	if n<0:
+		return (None)
+	while(n>0):
+		fact=fact*n
+		n-=1
+	return(fact)
 
 def roots(a, b, c):
 	"""Computes the roots of the ax^2 + bx + x = 0 polynomial.
@@ -37,6 +45,6 @@ def integrate(function, lower, upper):
 	pass
 
 if __name__ == '__main__':
-	print(fact(5))
+	print(fact(126))
 	print(roots(1, 0, 1))
 	print(integrate('x ** 2 - 1', -1, 1))
