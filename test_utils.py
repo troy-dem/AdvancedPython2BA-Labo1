@@ -23,6 +23,7 @@ class TestUtils(unittest.TestCase):
     
     def test_integrate(self):
         # À compléter...
+        # to test travis
         pass
 
 if __name__ == '__main__':
