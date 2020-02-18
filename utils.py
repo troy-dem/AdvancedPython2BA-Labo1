@@ -3,7 +3,6 @@
 # Author: Sébastien Combéfis
 # Version: February 8, 2018
 from math import sqrt
-#from scipy import integrate
 
 def fact(n):
 	"""Computes the factorial of a natural number.
@@ -23,6 +22,12 @@ def fact(n):
 	return(fact)
 
 def roots(a, b, c):
+	"""Computes the roots of the ax^2 + bx + x = 0 polynomial.
+	
+	Pre: -
+	Post: Returns a tuple with zero, one or two elements corresponding
+		to the roots of the ax^2 + bx + c polynomial.
+	"""
 	delta=(b**2)-(4*a*c)
 	if delta < 0:
 		return ()
@@ -44,9 +49,10 @@ def integrate(function, lower, upper):
 		you'll probably need the 'eval' function to evaluate the function
 		to integrate given as a string.
 	"""
+
 	pass
 
 if __name__ == '__main__':
-	print(fact(-5))
-	print(roots(1, 0, 1))
+	print(fact(5))
+	print(roots(1, -2, 1))
 	print(integrate('x ** 2 - 1', -1, 1))

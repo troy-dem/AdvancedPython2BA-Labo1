@@ -5,39 +5,21 @@
 import unittest
 import utils
 
-class Fact0Error(Exception):
-    pass
-class Fact0Error(Exception):
-    pass
-class WrongArgumentError(Exception):
-    pass
-class WrongComputationError(Exception):
-    pass
-class WrongReturnTypeError(Exception):
-    pass
-
 
 class TestUtils(unittest.TestCase):
     def test_fact(self):
         # À compléter...
-        if utils.fact(0) != 1:
-            raise Fact0Error()
-        if utils.fact("jfeooei") != None:
-            raise WrongArgumentError()
-        if utils.fact(9)!= 362880:
-            raise WrongComputationError()
+        self.assertEqual(utils.fact(0),1)
+        self.assertIsNone(utils.fact("zetze"))
+        self.assertEqual(utils.fact(9),362880)
 
     
     def test_roots(self):
         # À compléter...
-        if type(utils.roots(1,0,2)) != tuple:
-            raise WrongReturnTypeError()
-        if utils.roots(1,-2,1)!=(1,):
-            raise WrongComputationError()
-        if utils.roots(1,-4,3)!=(3,1):
-            raise WrongComputationError()
-        if utils.roots(20,1,3)!=():
-            raise NegativeDelataError()
+        self.assertEqual(type(utils.roots(1,0,6)),tuple)
+        self.assertEqual(utils.roots(1,-2,1),(1,))
+        self.assertEqual(utils.roots(1,-4,3),(3,1))
+        self.assertEqual(utils.roots(20,1,3),())
     
     def test_integrate(self):
         # À compléter...
